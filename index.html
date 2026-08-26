@@ -269,6 +269,7 @@
     .fade-up { animation: fadeUp 0.65s ease forwards; }
     .d1{animation-delay:0.12s;opacity:0;} .d2{animation-delay:0.24s;opacity:0;} .d3{animation-delay:0.36s;opacity:0;}
 
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     .panel-caption { max-width: 420px; font-size: 0.68rem; line-height: 1.5; color: var(--text-dim); margin-top: 0.85rem; text-align: center; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em; }
     .captcha-row { margin-top: 0.7rem; display: flex; justify-content: center; }
     .captcha-row:empty { display: none; }
@@ -327,7 +328,6 @@
     .faq-item p { font-size: 0.92rem; line-height: 1.8; color: var(--text-dim); padding: 0 2.5rem 1.5rem 0; margin: 0; }
 
 
-    .footer-addr { font-size: 0.74rem; color: var(--text-dim); margin-top: 0.35rem; }
     .cta-response { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.9rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em; }
 
     @media(max-width:900px){
@@ -361,6 +361,8 @@
       .bound-section{padding:4rem 1.5rem;}
       .bound-grid{grid-template-columns:minmax(0,1fr);gap:1rem;}
       .faq-section{padding:4rem 1.5rem;}
+      .kpi-row{grid-template-columns:repeat(3,minmax(0,1fr));}
+      .kpi .val{font-size:1.15rem;}
       .cta-section{padding:4rem 1.5rem;} .cta-form{flex-direction:column;}
       footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}
     }
@@ -385,7 +387,7 @@
   <section class="hero">
     <div class="hero-left">
       <p class="eyebrow fade-up">// Ecommerce Distribution Partner</p>
-      <h1 class="fade-up d1">Your Life's Work,<br/><em>Scaled</em> for the<br/>Digital Age.</h1>
+      <h1 class="fade-up d1">Your Life&rsquo;s Work,<br/><em>Scaled</em> for the<br/>Digital Age.</h1>
       <p class="hero-desc fade-up d2">We launch products, brands, and companies online &mdash; and then run them. From the first product page to the support email after delivery, we take on as much of the operation as you want.</p>
       <div class="hero-actions fade-up d3">
         <a href="#contact" class="btn-primary">Start a Conversation</a>
@@ -438,7 +440,7 @@
   <section id="how">
     <p class="section-label">The Process</p>
     <h2 class="section-title">Simple. Respectful. Built Around You.</h2>
-    <p class="section-sub">Designed for business owners who've spent decades building — not navigating e-commerce bureaucracy.</p>
+    <p class="section-sub">Designed for business owners who&rsquo;ve spent decades building — not navigating e-commerce bureaucracy.</p>
     <div class="steps-timeline">
       <div class="timeline-items">
         <div class="timeline-step">
@@ -485,8 +487,8 @@
           <div class="timeline-node">→</div>
           <div class="timeline-content">
             <div class="step-icon">💬</div>
-            <h3>Let's Talk</h3>
-            <p>No obligation. Just a conversation with someone who understands what you've built.</p>
+            <h3>Let&rsquo;s Talk</h3>
+            <p>No obligation. Just a conversation with someone who understands what you&rsquo;ve built.</p>
             <a href="#contact" class="timeline-cta-btn">Schedule a Call</a>
           </div>
         </div>
@@ -497,7 +499,7 @@
   <section class="why-section" id="why">
     <p class="section-label">Why CL Fulfillment</p>
     <h2 class="section-title">We Treat Your Business Like Our Own.</h2>
-    <p class="section-sub">We're not a liquidator. We're not a flipper. We're a long-term partner &mdash; as your distributor, as the operator of your accounts, or both.</p>
+    <p class="section-sub">We&rsquo;re not a liquidator. We&rsquo;re not a flipper. We&rsquo;re a long-term partner &mdash; as your distributor, as the operator of your accounts, or both.</p>
     <div class="why-panel">
       <div class="panel-bar">
         <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
@@ -549,7 +551,7 @@
               <span class="log-icon">🤲</span>
               <span class="log-key">RESPECT_FOR_YOUR_LEGACY</span>
             </div>
-            <div class="log-entry-body">We tell your story. Your brand's history is a competitive advantage and we make sure every customer knows it.</div>
+            <div class="log-entry-body">We tell your story. Your brand&rsquo;s history is a competitive advantage and we make sure every customer knows it.</div>
           </div>
           <div class="log-entry">
             <div class="log-entry-header">
@@ -558,7 +560,7 @@
               <span class="log-icon">📊</span>
               <span class="log-key">FULL_TRANSPARENCY</span>
             </div>
-            <div class="log-entry-body">Real-time dashboards, monthly reports, and a direct line to your account manager. Always know how you're performing.</div>
+            <div class="log-entry-body">Real-time dashboards, monthly reports, and a direct line to your account manager. Always know how you&rsquo;re performing.</div>
           </div>
           <div class="log-entry">
             <div class="log-entry-header">
@@ -611,19 +613,19 @@
     <p class="section-sub">The fastest way to know whether we&rsquo;re a fit is to know where we stop.</p>
     <div class="bound-grid">
       <div class="bound-card">
-        <h3><span class="bound-x">&#10007;</span> We don&rsquo;t rebrand your product.</h3>
+        <h3><span class="bound-x" aria-hidden="true">&#10007;</span> We don&rsquo;t rebrand your product.</h3>
         <p>It goes to market as yours &mdash; your name, your story, your reputation. We&rsquo;re not building our own label on the back of your work.</p>
       </div>
       <div class="bound-card">
-        <h3><span class="bound-x">&#10007;</span> We don&rsquo;t ask for money up front.</h3>
+        <h3><span class="bound-x" aria-hidden="true">&#10007;</span> We don&rsquo;t ask for money up front.</h3>
         <p>No setup fee, no retainer, no onboarding investment. If we&rsquo;re buying, you get paid before we&rsquo;ve sold a single unit.</p>
       </div>
       <div class="bound-card">
-        <h3><span class="bound-x">&#10007;</span> We don&rsquo;t sell to liquidators.</h3>
+        <h3><span class="bound-x" aria-hidden="true">&#10007;</span> We don&rsquo;t sell to liquidators.</h3>
         <p>Nothing we take on ends up on a clearance site undercutting your own pricing or cheapening what you built.</p>
       </div>
       <div class="bound-card">
-        <h3><span class="bound-x">&#10007;</span> We don&rsquo;t take work we can&rsquo;t do well.</h3>
+        <h3><span class="bound-x" aria-hidden="true">&#10007;</span> We don&rsquo;t take work we can&rsquo;t do well.</h3>
         <p>If your product isn&rsquo;t a fit for online marketplaces, we&rsquo;ll tell you in the first conversation rather than sign you up anyway.</p>
       </div>
     </div>
@@ -672,12 +674,16 @@
 
   <section class="cta-section" id="contact">
     <p class="section-label">Get Started</p>
-    <h2 class="section-title">Let's Have a Conversation.</h2>
-    <p class="section-sub">If you've built something real and you're wondering what comes next, we'd love to hear your story.</p>
+    <h2 class="section-title">Let&rsquo;s Have a Conversation.</h2>
+    <p class="section-sub">If you&rsquo;ve built something real and you&rsquo;re wondering what comes next, we&rsquo;d love to hear your story.</p>
     <form class="cta-form" id="inquiry-form" onsubmit="handleInquiry(event)">
+      <label class="sr-only" for="biz-name">Business name</label>
       <input type="text" id="biz-name" name="business_name" placeholder="Business name" required autocomplete="organization" />
+      <label class="sr-only" for="biz-email">Email address</label>
       <input type="email" id="biz-email" name="email" placeholder="Email address" required autocomplete="email" />
+      <label class="sr-only" for="biz-phone">Phone number</label>
       <input type="tel" id="biz-phone" name="phone" placeholder="Phone number" required autocomplete="tel" inputmode="tel" pattern="[0-9\s\(\)\+\.\-]{10,20}" title="Enter a phone number with at least 10 digits" />
+      <label class="sr-only" for="biz-web">Website or where you sell today (optional)</label>
       <input type="text" id="biz-web" name="website" placeholder="Website or where you sell today (optional)" autocomplete="url" />
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" />
       <div class="captcha-row"><div class="h-captcha" data-captcha="true" data-theme="dark"></div></div>
@@ -700,7 +706,7 @@
 
   <footer>
     <div class="footer-logo"><span>CL</span> Fulfillment</div>
-    <div><p>Part of Capital Freight-US &middot; &copy; 2026 Capital Freight-US. All rights reserved.</p><p class="footer-addr">7147 E Rancho Vista Dr, Scottsdale, AZ 85251</p></div>
+    <p>Part of Capital Freight-US &middot; &copy; 2026 Capital Freight-US. All rights reserved.</p>
     <div class="footer-links">
       <a href="privacy.html" data-modal="privacy">Privacy</a>
       <a href="terms.html" data-modal="terms">Terms</a>
