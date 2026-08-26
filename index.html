@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CL Fulfillment helps small businesses and well-established companies market and sell their products on ecommerce marketplaces. We handle listings, inventory management, fulfillment, and the operational details behind online growth." />
+  <meta name="description" content="CL Fulfillment takes proven products to market on ecommerce marketplaces &mdash; buying inventory outright and selling it ourselves, or running listings, advertising, and fulfillment on the brand's own seller account." />
   <meta name="theme-color" content="#0A0E1A" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A0E1A'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,Helvetica,sans-serif' font-weight='900' font-size='13' fill='%2322D3EE'%3ECL%3C/text%3E%3C/svg%3E" />
   <title>CL Fulfillment — Your Products. New Life.</title>
   <meta property="og:type" content="website" />
   <meta property="og:title" content="CL Fulfillment — Your Products. New Life." />
-  <meta property="og:description" content="We help proven businesses sell their products on ecommerce marketplaces — listings, inventory management, fulfillment, and operational efficiency, handled." />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:description" content="We take proven products to market on ecommerce marketplaces — buying your inventory outright, or running listings, advertising, and fulfillment on your own seller account." />
+  <link rel="canonical" href="https://clfulfill.com/" />
+  <meta property="og:url" content="https://clfulfill.com/" />
+  <meta property="og:site_name" content="CL Fulfillment" />
+  <meta property="og:image" content="https://clfulfill.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="CL Fulfillment — ecommerce distribution partner" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://clfulfill.com/og-image.png" />
   <meta name="twitter:title" content="CL Fulfillment — Your Products. New Life." />
-  <meta name="twitter:description" content="Ecommerce distribution partner for small and well-established businesses." />
+  <meta name="twitter:description" content="Ecommerce distribution and marketplace management for proven products." />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -65,7 +73,7 @@
     .btn-ghost { background: transparent; color: var(--text-dim); padding: 0.9rem 2rem; border: 1px solid var(--border2); border-radius: 6px; font-family: 'Sora', sans-serif; font-size: 0.88rem; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s; }
     .btn-ghost:hover { border-color: var(--blue); color: var(--white); }
 
-    .hero-right { display: flex; align-items: center; justify-content: center; padding: 4rem 4rem 4rem 2rem; position: relative; z-index: 1; }
+    .hero-right { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem 4rem 4rem 2rem; position: relative; z-index: 1; }
     .panel { width: 100%; max-width: 420px; background: var(--surface); border: 1px solid var(--border2); border-radius: 12px; overflow: hidden; box-shadow: 0 32px 80px rgba(0,0,0,0.6); }
     .panel-bar { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0.85rem 1.3rem; display: flex; align-items: center; gap: 0.5rem; }
     .dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -261,6 +269,9 @@
     .fade-up { animation: fadeUp 0.65s ease forwards; }
     .d1{animation-delay:0.12s;opacity:0;} .d2{animation-delay:0.24s;opacity:0;} .d3{animation-delay:0.36s;opacity:0;}
 
+    .panel-caption { max-width: 420px; font-size: 0.68rem; line-height: 1.5; color: var(--text-dim); margin-top: 0.85rem; text-align: center; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em; }
+    .captcha-row { margin-top: 0.7rem; display: flex; justify-content: center; }
+    .captcha-row:empty { display: none; }
     .cta-fineprint { font-size: 0.72rem; line-height: 1.6; color: var(--text-dim); margin-top: 0.9rem; text-align: left; }
     .cta-fineprint a { color: var(--blue-bright); text-decoration: none; border-bottom: 1px solid rgba(96,165,250,0.3); }
     .cta-fineprint a:hover { border-bottom-color: var(--blue-bright); }
@@ -286,13 +297,22 @@
     @media(max-width:700px){ .modal-overlay{padding:0;} .modal-box{max-height:100vh;border-radius:0;} }
 
     @media(max-width:900px){
-      nav{padding:1rem 1.5rem;} .nav-links{gap:1rem;}
-      .hero{grid-template-columns:1fr;}
+      nav{padding:0.85rem 1.1rem;} .nav-links{gap:0.9rem;}
+      .nav-logo{font-size:0.98rem;white-space:nowrap;}
+      .nav-cta{padding:0.5rem 0.95rem !important;font-size:0.78rem !important;white-space:nowrap;}
+      .hero{grid-template-columns:minmax(0,1fr);}
+      .hero-left,.hero-right{min-width:0;}
+      .hero-right{display:block;}
+      .hero-right .panel{width:100%;max-width:520px;margin:0 auto;}
+      .panel-body{padding:1.1rem;}
+      .panel-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+      .hero h1{font-size:clamp(2.1rem,8.6vw,3.4rem);}
+      .eyebrow{flex-wrap:wrap;}
       .hero-left{padding:3rem 1.5rem 2rem;} .hero-right{padding:1rem 1.5rem 3rem;}
       .stats-strip{padding:2rem 1.5rem;} .stat-div{display:none;}
       section{padding:4rem 1.5rem;}
-      .why-grid{grid-template-columns:1fr;}
-      .timeline-items{grid-template-columns:1fr; gap: 2rem; padding-left: 40px;}
+      .why-grid{grid-template-columns:minmax(0,1fr);}
+      .timeline-items{grid-template-columns:minmax(0,1fr); gap: 2rem; padding-left: 40px;}
       .timeline-items::before{top: 0; bottom: 0; left: 29px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, rgba(59,130,246,0.15) 0%, rgba(34,211,238,0.75) 15%, rgba(34,211,238,0.75) 85%, rgba(59,130,246,0.15) 100%);}
       .timeline-step{flex-direction: row; text-align: left; gap: 1.2rem; align-items: flex-start;}
       .timeline-node{margin-bottom: 0; margin-left: -40px; flex-shrink: 0;}
@@ -302,10 +322,14 @@
       .why-log{padding: 1.3rem 1.2rem 1.1rem; font-size: 0.8rem;}
       .log-output{padding-left: 1rem;}
       .log-entry-body{font-size: 0.88rem; padding-left: 1.2rem;}
-      .results-section{grid-template-columns:1fr;padding:4rem 1.5rem;gap:3rem;}
+      .results-section{grid-template-columns:minmax(0,1fr);padding:4rem 1.5rem;gap:3rem;}
       .rc.wide{grid-column:span 2;}
       .cta-section{padding:4rem 1.5rem;} .cta-form{flex-direction:column;}
       footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}
+    }
+    @media(max-width:560px){
+      .nav-links a:not(.nav-cta){display:none;}
+      .panel-caption{font-size:0.63rem;}
     }
   </style>
 </head>
@@ -324,7 +348,7 @@
     <div class="hero-left">
       <p class="eyebrow fade-up">// Ecommerce Distribution Partner</p>
       <h1 class="fade-up d1">Your Life's Work,<br/><em>Scaled</em> for the<br/>Digital Age.</h1>
-      <p class="hero-desc fade-up d2">We help small businesses and well-established companies sell their products on the ecommerce marketplaces where customers actually shop — handling listings, inventory, and fulfillment so you can keep doing what you already do well.</p>
+      <p class="hero-desc fade-up d2">We launch products, brands, and companies online &mdash; and then run them. From the first product page to the support email after delivery, we take on as much of the operation as you want.</p>
       <div class="hero-actions fade-up d3">
         <a href="#contact" class="btn-primary">Start a Conversation</a>
         <a href="#how" class="btn-ghost">See How It Works</a>
@@ -334,7 +358,7 @@
       <div class="panel">
         <div class="panel-bar">
           <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-          <span class="panel-title">cl-fulfillment / partner-dashboard</span>
+          <span class="panel-title">cl-fulfillment / sample-dashboard</span>
         </div>
         <div class="panel-body">
           <div class="kpi-row">
@@ -359,6 +383,7 @@
           </div>
         </div>
       </div>
+      <p class="panel-caption">Illustrative example. Figures shown are sample data, not actual client accounts.</p>
     </div>
   </section>
 
@@ -391,7 +416,7 @@
           <div class="timeline-content">
             <div class="step-icon">📋</div>
             <h3>We Agree on Terms</h3>
-            <p>Fair wholesale or exclusive distribution agreement. You set your floor price — we handle everything above that.</p>
+            <p>Either we buy your inventory under a wholesale or distribution agreement at a floor price you set, or we operate your own marketplace accounts for a defined fee. Whichever structure fits, it is in writing before anything launches.</p>
           </div>
         </div>
         <div class="timeline-step">
@@ -434,7 +459,7 @@
   <section class="why-section" id="why">
     <p class="section-label">Why CL Fulfillment</p>
     <h2 class="section-title">We Treat Your Business Like Our Own.</h2>
-    <p class="section-sub">We're not a liquidator. We're not a flipper. We're a long-term distribution partner who wins when you win.</p>
+    <p class="section-sub">We're not a liquidator. We're not a flipper. We're a long-term partner &mdash; as your distributor, as the operator of your accounts, or both.</p>
     <div class="why-panel">
       <div class="panel-bar">
         <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
@@ -448,22 +473,31 @@
               <span class="log-id">[01]</span>
               <span class="log-status">✓</span>
               <span class="log-icon">🛡️</span>
-              <span class="log-key">EXCLUSIVE_DISTRIBUTION_RIGHTS</span>
+              <span class="log-key">CHANNEL_CONTROL</span>
             </div>
-            <div class="log-entry-body">We lock in exclusivity — no undercut competition, no price wars, no erosion of the brand you spent decades building.</div>
+            <div class="log-entry-body">Where we hold distribution rights we lock in exclusivity, and where we run your accounts we police the listings. Either way: no undercut competition, no price wars, no erosion of the brand you built.</div>
           </div>
           <div class="log-entry">
             <div class="log-entry-header">
               <span class="log-id">[02]</span>
               <span class="log-status">✓</span>
-              <span class="log-icon">💰</span>
-              <span class="log-key">FAIR_TRANSPARENT_PRICING</span>
+              <span class="log-icon">👷</span>
+              <span class="log-key">PAYROLL_AND_PEOPLE</span>
             </div>
-            <div class="log-entry-body">You set your floor price. We pay it reliably, on time, every order. No games, no late payments.</div>
+            <div class="log-entry-body">A bulk purchase order puts cash in your business before a single unit sells, and because we ship from your warehouse, your team keeps picking, packing, and earning. Growing online doesn&rsquo;t have to mean shrinking your floor.</div>
           </div>
           <div class="log-entry">
             <div class="log-entry-header">
               <span class="log-id">[03]</span>
+              <span class="log-status">✓</span>
+              <span class="log-icon">💰</span>
+              <span class="log-key">FAIR_TRANSPARENT_PRICING</span>
+            </div>
+            <div class="log-entry-body">If we are buying, you set your floor price and we pay it reliably, on time, every order. If we are running your accounts, the fee is fixed and stated up front. No games, no late payments, no surprise deductions.</div>
+          </div>
+          <div class="log-entry">
+            <div class="log-entry-header">
+              <span class="log-id">[04]</span>
               <span class="log-status">✓</span>
               <span class="log-icon">🎯</span>
               <span class="log-key">MARKETPLACE_EXPERTISE</span>
@@ -472,7 +506,7 @@
           </div>
           <div class="log-entry">
             <div class="log-entry-header">
-              <span class="log-id">[04]</span>
+              <span class="log-id">[05]</span>
               <span class="log-status">✓</span>
               <span class="log-icon">🤲</span>
               <span class="log-key">RESPECT_FOR_YOUR_LEGACY</span>
@@ -481,7 +515,7 @@
           </div>
           <div class="log-entry">
             <div class="log-entry-header">
-              <span class="log-id">[05]</span>
+              <span class="log-id">[06]</span>
               <span class="log-status">✓</span>
               <span class="log-icon">📊</span>
               <span class="log-key">FULL_TRANSPARENCY</span>
@@ -490,7 +524,7 @@
           </div>
           <div class="log-entry">
             <div class="log-entry-header">
-              <span class="log-id">[06]</span>
+              <span class="log-id">[07]</span>
               <span class="log-status">✓</span>
               <span class="log-icon">⚙️</span>
               <span class="log-key">INVENTORY_AND_OPERATIONS</span>
@@ -499,7 +533,7 @@
           </div>
           <div class="log-entry">
             <div class="log-entry-header">
-              <span class="log-id">[07]</span>
+              <span class="log-id">[08]</span>
               <span class="log-status">✓</span>
               <span class="log-icon">🌱</span>
               <span class="log-key">BUILT_FOR_THE_LONG_RUN</span>
@@ -516,7 +550,7 @@
     <div>
       <p class="section-label">Results</p>
       <h2 class="section-title">Real Numbers from Real Partnerships.</h2>
-      <p class="section-sub">Every brand we partner with benefits from our proven process and marketplace expertise from day one.</p>
+      <p class="section-sub">Every brand we work with gets the same process and the same marketplace expertise, whether we are buying the inventory or running the accounts.</p>
       <div class="highlights">
         <div class="hl"><div class="hl-check">✓</div>Zero upfront cost to the business owner</div>
         <div class="hl"><div class="hl-check">✓</div>Exclusive deals mean no race to the bottom on price</div>
@@ -527,7 +561,7 @@
     <div class="result-cards">
       <div class="rc"><div class="fig">2×</div><div class="desc">Average revenue increase for partners in their first year online</div></div>
       <div class="rc"><div class="fig">4.8★</div><div class="desc">Average customer rating across all partner product listings</div></div>
-      <div class="rc wide"><div class="fig">$18M+</div><div class="desc">Total revenue generated across all CL Fulfillment partner brands — with zero upfront investment from any owner.</div></div>
+      <div class="rc wide"><div class="fig">$18M+</div><div class="desc">Total revenue generated across all CL Fulfillment partner brands, with no upfront investment required from the owner.</div></div>
       <div class="rc"><div class="fig">90d</div><div class="desc">Average days from first conversation to first online sale</div></div>
       <div class="rc"><div class="fig">$0</div><div class="desc">Upfront cost to the business owner to get started</div></div>
     </div>
@@ -540,8 +574,9 @@
     <form class="cta-form" id="inquiry-form" onsubmit="handleInquiry(event)">
       <input type="text" id="biz-name" name="business_name" placeholder="Business name" required autocomplete="organization" />
       <input type="email" id="biz-email" name="email" placeholder="Email address" required autocomplete="email" />
-      <input type="tel" id="biz-phone" name="phone" placeholder="Phone number" required autocomplete="tel" />
+      <input type="tel" id="biz-phone" name="phone" placeholder="Phone number" required autocomplete="tel" inputmode="tel" pattern="[0-9\s\(\)\+\.\-]{10,20}" title="Enter a phone number with at least 10 digits" />
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" />
+      <div class="captcha-row"><div class="h-captcha" data-captcha="true"></div></div>
       <div class="cta-error" id="cta-error" style="display:none;">Something went wrong. Please try again in a moment.</div>
       <button type="submit">Get in Touch</button>
       <p class="cta-fineprint">By submitting, you agree we may contact you by phone or email about your inquiry. See our <a href="privacy.html" data-modal="privacy">Privacy Notice</a> and <a href="terms.html" data-modal="terms">Terms of Use</a>.</p>
@@ -561,7 +596,11 @@
     </div>
   </footer>
 
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   <script>
+    // timestamp the moment the form becomes interactive, to catch instant bot submits
+    var formLoadedAt = Date.now();
+
     async function handleInquiry(e) {
       e.preventDefault();
       const form = document.getElementById('inquiry-form');
@@ -573,6 +612,26 @@
       errorEl.style.display = 'none';
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
+
+      // Phone must contain at least 10 digits. Enforced here as well as via the
+      // pattern attribute, because an invalid pattern is silently ignored by browsers.
+      var digits = (document.getElementById('biz-phone').value.match(/\d/g) || []).length;
+      if (digits < 10) {
+        document.getElementById('biz-phone').setCustomValidity('Please enter a phone number with at least 10 digits.');
+        document.getElementById('biz-phone').reportValidity();
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+        return;
+      }
+      document.getElementById('biz-phone').setCustomValidity('');
+
+      // A human cannot read the page and fill three fields in under three seconds.
+      if (Date.now() - formLoadedAt < 3000) {
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+        return;
+      }
 
       const formData = new FormData(form);
       formData.append('access_key', '44fba177-886c-48f2-bd7b-79833abcf581');
@@ -614,8 +673,7 @@
       </div>
       <div class="modal-body">
     <div class="legal-meta">
-      Effective: January 5, 2026<br/>
-      Applies to: clfulfill.com
+      Effective: January 5, 2026
     </div>
     <h2 id="priv-scope">What this notice covers</h2>
     <p>This notice explains what information we collect through clfulfill.com, why we collect it, who else sees it, how long we keep it, and what you can ask us to do with it.</p>
@@ -623,7 +681,7 @@
     <p>This notice does not cover information you give us outside this website, such as in a direct email exchange, in a signed agreement, or during the course of a business relationship, although we handle that information consistently with the principles described here.</p>
 
     <h2 id="priv-cookies">Cookies and tracking</h2>
-    <p>This website does not set advertising or analytics cookies. We do not use Google Analytics, Meta or LinkedIn pixels, chat widgets, heat mapping, or session recording tools. We do not track visitors across websites and we do not build advertising profiles.</p>
+    <p>This website does not set advertising or analytics cookies. We do not use Google Analytics, Meta or LinkedIn pixels, chat widgets, heat mapping, or session recording tools. We do not track visitors across websites and we do not build advertising profiles. The only cookie that may be set is one placed by hCaptcha, the service that protects our contact form from automated abuse, and it exists solely to tell people apart from bots.</p>
     <p>Because we do not track visitors across sites, there is nothing for a Do Not Track browser signal or a Global Privacy Control signal to opt you out of. We would honor such a signal if we ever added tracking, and we would update this notice before doing so.</p>
 
     <h2 id="priv-state">State privacy rights</h2>
@@ -654,7 +712,7 @@
 
     <h2 id="priv-share">Who we share information with</h2>
     <p>We do not share your information with anyone except the service providers we need in order to run this website and respond to you, and the limited legal circumstances described below. Each provider is permitted to use your information only to perform services for us.</p>
-    <p>Our contact form is processed and delivered by Web3Forms, so every submission passes through their service on its way to our inbox. That submission then arrives as an email in Google Workspace, which we use as our email and productivity provider and where your message is stored while we read and reply to it. This website is hosted by Vercel, which receives technical request data in its server logs as described above. Google also receives your IP address and browser information when the typefaces used on our site are loaded. From time to time our professional advisors, such as accountants, attorneys, and insurers, may see information where it is relevant to our business, and only to the extent necessary in the circumstances.</p>
+    <p>Our contact form is processed and delivered by Web3Forms, so every submission passes through their service on its way to our inbox. To keep the form from being abused by automated submissions, it is protected by hCaptcha, a bot-detection service operated by Intuition Machines; when the form loads, hCaptcha receives your IP address and limited information about your browser and interaction with the page, and it may set a cookie for that purpose. hCaptcha is used only to tell people apart from bots, not to track you or to advertise to you, and its handling of that information is governed by its own privacy policy. That submission then arrives as an email in Google Workspace, which we use as our email and productivity provider and where your message is stored while we read and reply to it. This website is hosted by Vercel, which receives technical request data in its server logs as described above. Google also receives your IP address and browser information when the typefaces used on our site are loaded. From time to time our professional advisors, such as accountants, attorneys, and insurers, may see information where it is relevant to our business, and only to the extent necessary in the circumstances.</p>
     <p>We may also disclose information where we are legally required to do so, in response to a subpoena, court order, or other valid legal process, or where necessary to protect our rights, safety, or property, or those of others.</p>
     <p>If our business is ever sold, merged, or reorganized, information may transfer to the successor as part of that transaction. We would give notice on this page before your information became subject to a materially different privacy notice.</p>
 
@@ -678,7 +736,7 @@
     <p>We may update this notice as our business or the law changes. When we do, we will revise the effective date shown at the top of this page. If a change materially affects how we handle information we already hold about you, we will make a reasonable effort to tell you directly at the email address you gave us. Your continued use of the site after an update means you accept the revised notice.</p>
 
     <h2 id="priv-who">Who we are</h2>
-    <p>CL Fulfillment helps small businesses and well-established companies market and sell their products on ecommerce marketplaces. CL Fulfillment is a business of Capital Freight-US, which operates this website and is the entity responsible for the information described in this notice. In this notice, CL Fulfillment, we, us, and our refer to that business.</p>
+    <p>CL Fulfillment sells proven products on ecommerce marketplaces, either by purchasing inventory from a brand and reselling it, or by operating a brand&rsquo;s own marketplace accounts on its behalf, together with the related listing, advertising, inventory, and fulfillment work. CL Fulfillment is a business of Capital Freight-US, which operates this website and is the entity responsible for the information described in this notice. In this notice, CL Fulfillment, we, us, and our refer to that business.</p>
 
     <h2 id="priv-reach">How to reach us</h2>
     <p>Questions about this notice, or about the information we hold about you, can be sent to <a href="mailto:support@capitalfreight-us.com">support@capitalfreight-us.com</a>, or by mail to CL Fulfillment, a Capital Freight-US company, 7147 E Rancho Vista Dr, Scottsdale, AZ 85251, United States.</p>
@@ -694,13 +752,12 @@
       </div>
       <div class="modal-body">
     <div class="legal-meta">
-      Effective: January 5, 2026<br/>
-      Applies to: clfulfill.com
+      Effective: January 5, 2026
     </div>
     <p>These Terms of Use govern your access to and use of clfulfill.com, referred to here as the Site, which is operated by Capital Freight-US under the CL Fulfillment brand. In these terms, CL Fulfillment, we, us, and our refer to that business. By using the Site, you agree to these terms. If you do not agree, please do not use the Site.</p>
 
     <h2 id="terms-site">What this Site is</h2>
-    <p>The Site is an informational page describing CL Fulfillment&rsquo;s services, which involve helping small businesses and well-established companies market and sell their products on ecommerce marketplaces, including listings, inventory management, fulfillment, and related operational support. Everything on it is provided for general information.</p>
+    <p>The Site is an informational page describing CL Fulfillment&rsquo;s services, which involve selling proven products on ecommerce marketplaces, either by purchasing inventory from a brand and reselling it or by operating a brand&rsquo;s own marketplace accounts on its behalf, together with the related listing, advertising, inventory, and fulfillment work. Everything on it is provided for general information.</p>
     <p>Nothing on this Site is an offer, a quote, a guarantee, or a contract. Descriptions of our process, results, or approach are illustrative. Any engagement between us begins only when both parties sign a written agreement, and that agreement, not this Site, governs the relationship.</p>
 
     <h2 id="terms-inquiries">Submitting an inquiry</h2>
@@ -716,7 +773,7 @@
     <p>You agree not to use the Site for any unlawful purpose or in violation of these terms, not to submit false, misleading, or fraudulent information through the contact form, and not to submit automated, bulk, or spam form submissions. You also agree not to attempt to gain unauthorized access to the Site, its hosting infrastructure, or any connected system, not to introduce malware or interfere with or disrupt the Site&rsquo;s operation or availability, and not to use automated means to scrape, harvest, or index the Site except for standard search engine crawling. You may not use the Site or anything on it to develop a competing product or service.</p>
 
     <h2 id="terms-thirdparty">Third-party services and links</h2>
-    <p>The Site relies on third-party services, including Vercel for hosting, Web3Forms for contact form delivery, and Google Fonts for typography. Their availability and performance are outside our control.</p>
+    <p>The Site relies on third-party services, including Vercel for hosting, Web3Forms for contact form delivery, hCaptcha for bot protection on that form, and Google Fonts for typography. Their availability and performance are outside our control.</p>
     <p>The Site may link to websites we do not operate. We do not endorse and are not responsible for their content, products, or practices, and your use of them is at your own risk and subject to their terms.</p>
     <p>Any third-party names, marketplaces, platforms, or logos referred to on the Site are the property of their respective owners and are used for identification and descriptive purposes only. Their use does not imply any affiliation with, endorsement by, or sponsorship by those parties.</p>
 
