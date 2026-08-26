@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CL Fulfillment helps small businesses and well-established companies market and sell their products on ecommerce marketplaces. We handle listings, inventory management, fulfillment, and the operational details behind online growth." />
+  <meta name="description" content="CL Fulfillment is an Amazon distribution partner for legacy brands. We take proven products from established business owners and launch them on Amazon — handling everything from listing to fulfillment." />
   <meta name="theme-color" content="#0A0E1A" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A0E1A'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,Helvetica,sans-serif' font-weight='900' font-size='13' fill='%2322D3EE'%3ECL%3C/text%3E%3C/svg%3E" />
   <title>CL Fulfillment — Your Products. New Life.</title>
   <meta property="og:type" content="website" />
   <meta property="og:title" content="CL Fulfillment — Your Products. New Life." />
-  <meta property="og:description" content="We help proven businesses sell their products on ecommerce marketplaces — listings, inventory management, fulfillment, and operational efficiency, handled." />
+  <meta property="og:description" content="Amazon distribution partner for legacy brands. We launch proven products on Amazon and handle everything from listing to fulfillment." />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="CL Fulfillment — Your Products. New Life." />
-  <meta name="twitter:description" content="Ecommerce distribution partner for small and well-established businesses." />
+  <meta name="twitter:description" content="Amazon distribution partner for legacy brands." />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -302,9 +302,9 @@
 
   <section class="hero">
     <div class="hero-left">
-      <p class="eyebrow fade-up">// Ecommerce Distribution Partner</p>
+      <p class="eyebrow fade-up">// Amazon Distribution Partner</p>
       <h1 class="fade-up d1">Your Life's Work,<br/><em>Scaled</em> for the<br/>Digital Age.</h1>
-      <p class="hero-desc fade-up d2">We help small businesses and well-established companies sell their products on the ecommerce marketplaces where customers actually shop — handling listings, inventory, and fulfillment so you can keep doing what you already do well.</p>
+      <p class="hero-desc fade-up d2">We take proven products from established business owners and launch them on Amazon — handling everything from listing to fulfillment so you can step back and watch revenue grow.</p>
       <div class="hero-actions fade-up d3">
         <a href="#contact" class="btn-primary">Start a Conversation</a>
         <a href="#how" class="btn-ghost">See How It Works</a>
@@ -343,11 +343,11 @@
   </section>
 
   <div class="stats-strip">
-    <div class="stat-item"><div class="big">47+</div><div class="sub">Partner brands</div></div>
+    <div class="stat-item"><div class="big">47+</div><div class="sub">Legacy brands partnered</div></div>
     <div class="stat-div"></div>
     <div class="stat-item"><div class="big">$18M</div><div class="sub">Revenue generated</div></div>
     <div class="stat-div"></div>
-    <div class="stat-item"><div class="big">4.8★</div><div class="sub">Avg customer rating</div></div>
+    <div class="stat-item"><div class="big">4.8★</div><div class="sub">Avg Amazon rating</div></div>
     <div class="stat-div"></div>
     <div class="stat-item"><div class="big">90 days</div><div class="sub">Avg time to first sale</div></div>
   </div>
@@ -378,16 +378,16 @@
           <div class="timeline-node">03</div>
           <div class="timeline-content">
             <div class="step-icon">🚀</div>
-            <h3>We Launch Your Storefront</h3>
-            <p>Professional photos, expert copywriting, and full storefront setup on the marketplaces that fit your product. Presented the way it deserves.</p>
+            <h3>We Launch on Amazon</h3>
+            <p>Professional photos, expert copywriting, full storefront setup. Your product, presented the way it deserves.</p>
           </div>
         </div>
         <div class="timeline-step">
           <div class="timeline-node">04</div>
           <div class="timeline-content">
             <div class="step-icon">📦</div>
-            <h3>We Handle Inventory &amp; Fulfillment</h3>
-            <p>Storage, stock levels, shipping, and returns — managed across every channel you sell on. Step back and let the system run.</p>
+            <h3>We Handle Fulfillment</h3>
+            <p>Via Amazon FBA, we manage all storage, shipping, and returns. Step back and let the system run.</p>
           </div>
         </div>
         <div class="timeline-step">
@@ -446,9 +446,9 @@
               <span class="log-id">[03]</span>
               <span class="log-status">✓</span>
               <span class="log-icon">🎯</span>
-              <span class="log-key">MARKETPLACE_EXPERTISE</span>
+              <span class="log-key">AMAZON_NATIVE_EXPERTISE</span>
             </div>
-            <div class="log-entry-body">Our team lives and breathes online marketplaces — search optimization, advertising, enhanced product content. We know how to make your product win.</div>
+            <div class="log-entry-body">Our team lives and breathes Amazon — SEO, advertising, A+ content. We know how to make your product win.</div>
           </div>
           <div class="log-entry">
             <div class="log-entry-header">
@@ -472,19 +472,10 @@
             <div class="log-entry-header">
               <span class="log-id">[06]</span>
               <span class="log-status">✓</span>
-              <span class="log-icon">⚙️</span>
-              <span class="log-key">INVENTORY_AND_OPERATIONS</span>
-            </div>
-            <div class="log-entry-body">Selling online is an operations problem as much as a sales one. We handle inventory planning, replenishment, and the day-to-day processes that keep orders moving — without adding headcount on your end.</div>
-          </div>
-          <div class="log-entry">
-            <div class="log-entry-header">
-              <span class="log-id">[07]</span>
-              <span class="log-status">✓</span>
               <span class="log-icon">🌱</span>
               <span class="log-key">BUILT_FOR_THE_LONG_RUN</span>
             </div>
-            <div class="log-entry-body">We invest in building your online presence over years — because strong brands hold their value far longer than a one-time sale.</div>
+            <div class="log-entry-body">We invest in building your Amazon presence over years — because strong brands hold their value far longer than a one-time sale.</div>
           </div>
         </div>
         <div class="log-line"><span class="log-prompt">$</span><span class="log-cursor">_</span></div>
@@ -496,7 +487,7 @@
     <div>
       <p class="section-label">Results</p>
       <h2 class="section-title">Real Numbers from Real Partnerships.</h2>
-      <p class="section-sub">Every brand we partner with benefits from our proven process and marketplace expertise from day one.</p>
+      <p class="section-sub">Every brand we partner with benefits from our proven process and Amazon expertise from day one.</p>
       <div class="highlights">
         <div class="hl"><div class="hl-check">✓</div>Zero upfront cost to the business owner</div>
         <div class="hl"><div class="hl-check">✓</div>Exclusive deals mean no race to the bottom on price</div>
@@ -505,10 +496,10 @@
       </div>
     </div>
     <div class="result-cards">
-      <div class="rc"><div class="fig">2×</div><div class="desc">Average revenue increase for partners in their first year online</div></div>
+      <div class="rc"><div class="fig">2×</div><div class="desc">Average revenue increase for partners in their first year on Amazon</div></div>
       <div class="rc"><div class="fig">4.8★</div><div class="desc">Average customer rating across all partner product listings</div></div>
-      <div class="rc wide"><div class="fig">$18M+</div><div class="desc">Total revenue generated across all CL Fulfillment partner brands — with zero upfront investment from any owner.</div></div>
-      <div class="rc"><div class="fig">90d</div><div class="desc">Average days from first conversation to first online sale</div></div>
+      <div class="rc wide"><div class="fig">$18M+</div><div class="desc">Total Amazon revenue generated across all CL Fulfillment partner brands — with zero upfront investment from any owner.</div></div>
+      <div class="rc"><div class="fig">90d</div><div class="desc">Average days from first conversation to first Amazon sale</div></div>
       <div class="rc"><div class="fig">$0</div><div class="desc">Upfront cost to the business owner to get started</div></div>
     </div>
   </section>
