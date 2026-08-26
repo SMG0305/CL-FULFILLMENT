@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Terms of Use for clfulfill.com, operated by Capital Freight-US." />
+  <meta name="theme-color" content="#0A0E1A" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230A0E1A'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial Black,Helvetica,sans-serif' font-weight='900' font-size='13' fill='%2322D3EE'%3ECL%3C/text%3E%3C/svg%3E" />
+  <title>Terms of Use — CL Fulfillment</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Terms of Use — CL Fulfillment" />
+  <meta property="og:description" content="Terms governing use of clfulfill.com." />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0A0E1A; --bg2: #0F1524; --surface: #1A2236;
+      --border: rgba(99,179,237,0.12); --border2: rgba(99,179,237,0.22);
+      --blue: #3B82F6; --blue-bright: #60A5FA; --cyan: #22D3EE;
+      --green: #10B981; --text: #E2E8F0; --text-dim: #8899AA; --white: #F8FAFC;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Sora', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+    body::before {
+      content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image: linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem; background: rgba(10,14,26,0.9); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-size: 1.1rem; font-weight: 800; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--cyan); }
+    .nav-links { display: flex; gap: 2.5rem; align-items: center; }
+    nav a { font-size: 0.83rem; font-weight: 500; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--white); }
+    .nav-cta { background: var(--blue) !important; color: var(--white) !important; padding: 0.55rem 1.3rem !important; border-radius: 6px; font-weight: 600 !important; box-shadow: 0 0 16px rgba(59,130,246,0.3); }
+    .nav-cta:hover { background: var(--blue-bright) !important; }
+
+    .legal-wrap { position: relative; z-index: 1; max-width: 820px; margin: 0 auto; padding: 10rem 2rem 6rem; }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cyan); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; }
+    .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--cyan); box-shadow: 0 0 6px var(--cyan); }
+    .legal-wrap h1 { font-size: clamp(2.1rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.1; color: var(--white); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .legal-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-dim); line-height: 1.9; padding-bottom: 2rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); }
+    .legal-meta strong { color: var(--text); font-weight: 500; }
+    .legal-wrap h2 { font-size: 1.32rem; font-weight: 700; color: var(--white); margin: 3rem 0 1rem; letter-spacing: -0.01em; scroll-margin-top: 100px; }
+    .legal-wrap h3 { font-size: 1rem; font-weight: 600; color: var(--white); margin: 1.8rem 0 0.6rem; }
+    .legal-wrap p { font-size: 0.95rem; line-height: 1.85; color: var(--text-dim); margin-bottom: 1.1rem; }
+    .legal-wrap li { font-size: 0.95rem; line-height: 1.8; color: var(--text-dim); margin-bottom: 0.6rem; }
+    .legal-wrap ul, .legal-wrap ol { padding-left: 1.4rem; margin-bottom: 1.3rem; }
+    .legal-wrap li::marker { color: var(--cyan); }
+    .legal-wrap strong { color: var(--text); font-weight: 600; }
+    .legal-wrap a { color: var(--blue-bright); text-decoration: none; border-bottom: 1px solid rgba(96,165,250,0.3); transition: border-color 0.2s; }
+    .legal-wrap a:hover { border-bottom-color: var(--blue-bright); }
+    .callout { background: var(--surface); border: 1px solid var(--border2); border-left: 3px solid var(--cyan); border-radius: 6px; padding: 1.3rem 1.5rem; margin: 1.6rem 0; }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout p { font-size: 0.9rem; }
+    .toc { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem 1.8rem; margin-bottom: 3rem; }
+    .toc p { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.9rem; }
+    .toc ol { columns: 2; column-gap: 2.5rem; padding-left: 1.1rem; margin-bottom: 0; }
+    .toc li { font-size: 0.86rem; margin-bottom: 0.45rem; break-inside: avoid; }
+    .toc a { color: var(--text-dim); border-bottom: none; }
+    .toc a:hover { color: var(--white); }
+    table.legal-table { width: 100%; border-collapse: collapse; margin: 1.4rem 0 1.8rem; font-size: 0.88rem; }
+    table.legal-table th { text-align: left; font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); font-weight: 500; padding: 0.7rem 1rem; border-bottom: 1px solid var(--border2); }
+    table.legal-table td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-dim); line-height: 1.65; vertical-align: top; }
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 2.4rem 5.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; position: relative; z-index: 1; }
+    .footer-logo { font-size: 1rem; font-weight: 800; color: var(--white); }
+    .footer-logo span { color: var(--cyan); }
+    footer p { font-size: 0.78rem; color: var(--text-dim); }
+    .footer-links { display: flex; gap: 2rem; }
+    .footer-links a { font-size: 0.78rem; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    @media(max-width:900px){
+      nav{padding:1rem 1.5rem;}
+      .nav-links{gap:1.2rem;}
+      .nav-links a:not(.nav-cta){display:none;}
+      .legal-wrap{padding:7rem 1.5rem 4rem;}
+      .toc ol{columns:1;}
+      footer{padding:2rem 1.5rem;flex-direction:column;text-align:center;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html"><span>CL</span> Fulfillment</a>
+    <div class="nav-links">
+      <a href="index.html#how">How It Works</a>
+      <a href="index.html#why">Why Us</a>
+      <a href="index.html#contact" class="nav-cta">Partner With Us</a>
+    </div>
+  </nav>
+
+  <main class="legal-wrap">
+    <p class="eyebrow">// Legal</p>
+    <h1>Terms of Use</h1>
+    <div class="legal-meta">
+      <strong>Effective:</strong> August 26, 2026<br/>
+      <strong>Last updated:</strong> August 26, 2026<br/>
+      <strong>Applies to:</strong> clfulfill.com
+    </div>
+
+    <p>These Terms of Use govern your access to and use of <strong>clfulfill.com</strong> (the "Site"), operated by <strong>Capital Freight-US</strong> under the CL Fulfillment brand ("CL Fulfillment," "we," "us," or "our"). By using the Site, you agree to these terms. If you do not agree, please do not use the Site.</p>
+
+    <h2 id="site">1. What this Site is</h2>
+    <p>The Site is an informational page describing CL Fulfillment's services as an Amazon distribution partner for established brands. Everything on it is provided for general information.</p>
+    <div class="callout">
+      <p><strong>Nothing on this Site is an offer, a quote, a guarantee, or a contract.</strong> Descriptions of our process, results, or approach are illustrative. Any engagement between us begins only when both parties sign a written agreement, and that agreement — not this Site — governs the relationship.</p>
+    </div>
+
+    <h2 id="inquiries">2. Submitting an inquiry</h2>
+    <p>When you use our contact form, you agree that the information you provide is accurate and that you are authorized to provide it — including any phone number or email address you enter. Do not submit someone else's contact information without their permission.</p>
+    <p>Submitting the form does not create a business relationship, an agency relationship, or any obligation on our part to respond or to provide services. We may decline any inquiry for any lawful reason.</p>
+    <p>By submitting the form, you agree that we may contact you at the email address and phone number you provided regarding your inquiry. We do not send marketing text messages. You can ask us to stop contacting you at any time. See our <a href="privacy.html">Privacy Notice</a> for details on how we handle what you send us.</p>
+
+    <h2 id="ip">3. Our content</h2>
+    <p>The Site and its contents — text, design, layout, graphics, logos, and the CL Fulfillment and Capital Freight-US names and marks — are owned by Capital Freight-US or its licensors and are protected by copyright, trademark, and other laws.</p>
+    <p>You may view and print pages for your own reference or to evaluate working with us. You may not copy, republish, sell, license, frame, scrape, or create derivative works from the Site or any part of it without our prior written permission.</p>
+
+    <h2 id="conduct">4. Acceptable use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the Site for any unlawful purpose or in violation of these terms</li>
+      <li>Submit false, misleading, or fraudulent information through the contact form</li>
+      <li>Submit automated, bulk, or spam form submissions</li>
+      <li>Attempt to gain unauthorized access to the Site, its hosting infrastructure, or any connected system</li>
+      <li>Introduce malware, or interfere with or disrupt the Site's operation or availability</li>
+      <li>Use automated means to scrape, harvest, or index the Site except for standard search engine crawling</li>
+      <li>Use the Site or anything on it to develop a competing product or service</li>
+    </ul>
+
+    <h2 id="thirdparty">5. Third-party services and links</h2>
+    <p>The Site relies on third-party services, including Vercel for hosting, Web3Forms for contact form delivery, and Google Fonts for typography. Their availability and performance are outside our control.</p>
+    <p>The Site may link to websites we do not operate. We do not endorse and are not responsible for their content, products, or practices, and your use of them is at your own risk and subject to their terms.</p>
+    <p>References to Amazon are for descriptive purposes only. CL Fulfillment is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. or its affiliates. Amazon and all related marks are trademarks of Amazon.com, Inc. or its affiliates.</p>
+
+    <h2 id="disclaimer">6. Disclaimer</h2>
+    <p>THE SITE AND ALL CONTENT ON IT ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+    <p>We do not warrant that the Site will be uninterrupted, timely, secure, or error-free, or that the information on it is complete, accurate, or current. We may change, suspend, or discontinue any part of the Site at any time without notice.</p>
+
+    <h2 id="liability">7. Limitation of liability</h2>
+    <p>TO THE FULLEST EXTENT PERMITTED BY LAW, NEITHER CAPITAL FREIGHT-US, CL FULFILLMENT, NOR THEIR OFFICERS, MEMBERS, EMPLOYEES, OR AGENTS WILL BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, BUSINESS, OR GOODWILL, ARISING OUT OF OR RELATING TO YOUR USE OF OR INABILITY TO USE THE SITE — WHETHER BASED IN CONTRACT, TORT, STRICT LIABILITY, OR ANY OTHER THEORY, AND EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+    <p>OUR TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO THE SITE WILL NOT EXCEED ONE HUNDRED U.S. DOLLARS ($100).</p>
+    <p>Some jurisdictions do not allow certain limitations of liability, so parts of this section may not apply to you.</p>
+
+    <h2 id="indemnity">8. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless Capital Freight-US, CL Fulfillment, and their officers, members, employees, and agents from any claims, losses, liabilities, damages, costs, and expenses (including reasonable attorneys' fees) arising out of your use of the Site, your submissions to it, or your violation of these terms or of any law or third-party right.</p>
+
+    <h2 id="law">9. Governing law and disputes</h2>
+    <p>These terms are governed by the laws of the <strong>State of Arizona</strong>, without regard to its conflict of laws rules. Any dispute arising out of or relating to these terms or the Site will be brought exclusively in the state or federal courts located in <strong>Maricopa County, Arizona</strong>, and you consent to the personal jurisdiction of those courts.</p>
+    <p>Any claim must be brought within <strong>one year</strong> after it arises, or it is permanently barred.</p>
+
+    <h2 id="general">10. General</h2>
+    <p>If any provision of these terms is held unenforceable, that provision will be limited or removed to the minimum extent necessary and the remaining provisions will stay in full force. Our failure to enforce any provision is not a waiver of it. These terms, together with our <a href="privacy.html">Privacy Notice</a>, are the entire agreement between you and us regarding the Site. You may not assign these terms; we may assign them in connection with a merger, acquisition, or sale of assets.</p>
+
+    <h2 id="changes">11. Changes to these terms</h2>
+    <p>We may update these terms at any time by posting a revised version here and updating the "Last updated" date. Your continued use of the Site after we post changes means you accept them.</p>
+
+    <h2 id="contact">12. Contact</h2>
+    <p>
+      <strong>CL Fulfillment</strong><br/>
+      a Capital Freight-US company<br/>
+      7147 E Rancho Vista Dr, Suite 107D<br/>
+      Scottsdale, AZ 85251<br/>
+      United States<br/>
+      <a href="mailto:support@capitalfreight-us.com">support@capitalfreight-us.com</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-logo"><span>CL</span> Fulfillment</div>
+    <p>Part of Capital Freight-US &middot; &copy; 2026 Capital Freight-US. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
