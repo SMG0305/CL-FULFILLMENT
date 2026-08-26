@@ -272,6 +272,17 @@
     .panel-caption { max-width: 420px; font-size: 0.68rem; line-height: 1.5; color: var(--text-dim); margin-top: 0.85rem; text-align: center; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em; }
     .captcha-row { margin-top: 0.7rem; display: flex; justify-content: center; }
     .captcha-row:empty { display: none; }
+    .cta-alt { max-width: 480px; margin: 1.8rem auto 0; text-align: center; }
+    .cta-alt-or { display: block; position: relative; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1.3rem; }
+    .cta-alt-or::before, .cta-alt-or::after { content: ''; position: absolute; top: 50%; width: calc(50% - 2rem); height: 1px; background: var(--border2); }
+    .cta-alt-or::before { left: 0; } .cta-alt-or::after { right: 0; }
+    .btn-ghost-book { display: inline-block; background: transparent; color: var(--text); text-decoration: none; padding: 0.8rem 1.6rem; border: 1px solid var(--border2); border-radius: 6px; font-size: 0.88rem; font-weight: 600; transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost-book:hover { border-color: var(--blue-bright); color: var(--white); }
+    .cta-alt-note { font-size: 0.72rem; color: var(--text-dim); margin-top: 0.8rem; }
+    .cta-success .success-head { color: var(--green); font-size: 0.98rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .cta-success .success-sub { color: var(--text-dim); font-size: 0.86rem; line-height: 1.6; font-weight: 400; margin-bottom: 1.2rem; }
+    .btn-book { display: inline-block; background: var(--blue); color: var(--white); text-decoration: none; padding: 0.8rem 1.6rem; border-radius: 6px; font-size: 0.88rem; font-weight: 600; box-shadow: 0 0 18px rgba(59,130,246,0.28); transition: background 0.2s; }
+    .btn-book:hover { background: var(--blue-bright); }
     .cta-fineprint { font-size: 0.72rem; line-height: 1.6; color: var(--text-dim); margin-top: 0.9rem; text-align: left; }
     .cta-fineprint a { color: var(--blue-bright); text-decoration: none; border-bottom: 1px solid rgba(96,165,250,0.3); }
     .cta-fineprint a:hover { border-bottom-color: var(--blue-bright); }
@@ -459,7 +470,7 @@
           <div class="timeline-content">
             <div class="step-icon">📦</div>
             <h3>We Handle Inventory &amp; Fulfillment</h3>
-            <p>Storage, stock levels, shipping, and returns — managed across every channel you sell on. Step back and let the system run.</p>
+            <p>Most often we drop ship straight from your location, so nothing about your operation has to change. Where it makes sense, we&rsquo;ll help you find a fulfillment center that shortens transit times and improves your margin. Either way, stock levels, shipping, and returns stay tracked across every channel you sell on.</p>
           </div>
         </div>
         <div class="timeline-step">
@@ -667,15 +678,23 @@
       <input type="text" id="biz-name" name="business_name" placeholder="Business name" required autocomplete="organization" />
       <input type="email" id="biz-email" name="email" placeholder="Email address" required autocomplete="email" />
       <input type="tel" id="biz-phone" name="phone" placeholder="Phone number" required autocomplete="tel" inputmode="tel" pattern="[0-9\s\(\)\+\.\-]{10,20}" title="Enter a phone number with at least 10 digits" />
+      <input type="text" id="biz-web" name="website" placeholder="Website or where you sell today (optional)" autocomplete="url" />
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" />
-      <div class="captcha-row"><div class="h-captcha" data-captcha="true"></div></div>
+      <div class="captcha-row"><div class="h-captcha" data-captcha="true" data-theme="dark"></div></div>
       <div class="cta-error" id="cta-error" style="display:none;">Something went wrong. Please try again in a moment.</div>
       <button type="submit">Get in Touch</button>
       <p class="cta-response">We reply within one business day.</p>
       <p class="cta-fineprint">By submitting, you agree we may contact you by phone or email about your inquiry. See our <a href="privacy.html" data-modal="privacy">Privacy Notice</a> and <a href="terms.html" data-modal="terms">Terms of Use</a>.</p>
     </form>
+    <div class="cta-alt" id="cta-alt">
+      <span class="cta-alt-or">or</span>
+      <a href="/book" target="_blank" rel="noopener noreferrer" class="btn-ghost-book">Book a 20-Minute Call</a>
+      <p class="cta-alt-note">Straight to the calendar &mdash; no form required.</p>
+    </div>
     <div class="cta-success" id="cta-success" style="display:none;">
-      ✓ Thanks — we'll reach out within one business day or less.
+      <p class="success-head">✓ Thanks &mdash; we&rsquo;ll reach out within one business day.</p>
+      <p class="success-sub">Would you rather not wait? Pick a time that works for you and we&rsquo;ll talk then.</p>
+      <a href="/book" target="_blank" rel="noopener noreferrer" class="btn-book">Book a 20-Minute Call</a>
     </div>
   </section>
 
@@ -702,6 +721,8 @@
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn.textContent;
 
+      var DEFAULT_ERR = 'Something went wrong. Please try again in a moment.';
+      errorEl.textContent = DEFAULT_ERR;
       errorEl.style.display = 'none';
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
@@ -726,8 +747,22 @@
         return;
       }
 
+      // Web3Forms rejects submissions with no captcha token once hCaptcha is
+      // activated on the form. Check here so the person is told what to fix
+      // rather than seeing a generic failure. If the widget never rendered,
+      // the field is absent and we let the submission through rather than
+      // blocking everyone on a third-party script.
+      var captchaField = form.querySelector('textarea[name="h-captcha-response"]');
+      if (captchaField && !captchaField.value) {
+        errorEl.textContent = 'Please complete the captcha above, then submit again.';
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+        return;
+      }
+
       const formData = new FormData(form);
-      formData.append('access_key', '44fba177-886c-48f2-bd7b-79833abcf581');
+      formData.append('access_key', '77637e8b-93e4-4299-87a8-fe53903b1f2f');
       formData.append('subject', 'New CL Fulfillment inquiry from ' + (formData.get('business_name') || 'website visitor'));
       formData.append('from_name', 'CL Fulfillment Website');
       formData.append('source', 'CL Fulfillment');
@@ -744,6 +779,8 @@
         const data = await response.json();
         if (data.success) {
           form.style.display = 'none';
+          var altBlock = document.getElementById('cta-alt');
+          if (altBlock) altBlock.style.display = 'none';
           success.style.display = 'block';
           success.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
@@ -752,6 +789,7 @@
       } catch (err) {
         submitBtn.disabled = false;
         submitBtn.textContent = originalBtnText;
+        errorEl.textContent = DEFAULT_ERR;
         errorEl.style.display = 'block';
       }
     }
@@ -824,6 +862,7 @@
 
     <h2 id="priv-links">Third-party links</h2>
     <p>This site may link to websites we do not control. We are not responsible for their content or privacy practices, and this notice does not apply to them. Review their privacy policies before giving them your information.</p>
+    <p>One of those links is our scheduling page, which is hosted by Google Calendar. We do not send Google anything about you; if you choose to book a call, whatever you enter on that page goes to Google as part of running the booking, and Google&rsquo;s own privacy policy governs it. The appointment details then appear on our calendar.</p>
 
     <h2 id="priv-changes">Changes to this notice</h2>
     <p>We may update this notice as our business or the law changes. When we do, we will revise the effective date shown at the top of this page. If a change materially affects how we handle information we already hold about you, we will make a reasonable effort to tell you directly at the email address you gave us. Your continued use of the site after an update means you accept the revised notice.</p>
@@ -866,7 +905,7 @@
     <p>You agree not to use the Site for any unlawful purpose or in violation of these terms, not to submit false, misleading, or fraudulent information through the contact form, and not to submit automated, bulk, or spam form submissions. You also agree not to attempt to gain unauthorized access to the Site, its hosting infrastructure, or any connected system, not to introduce malware or interfere with or disrupt the Site&rsquo;s operation or availability, and not to use automated means to scrape, harvest, or index the Site except for standard search engine crawling. You may not use the Site or anything on it to develop a competing product or service.</p>
 
     <h2 id="terms-thirdparty">Third-party services and links</h2>
-    <p>The Site relies on third-party services, including Vercel for hosting, Web3Forms for contact form delivery, hCaptcha for bot protection on that form, and Google Fonts for typography. Their availability and performance are outside our control.</p>
+    <p>The Site relies on third-party services, including Vercel for hosting, Web3Forms for contact form delivery, hCaptcha for bot protection on that form, Google Calendar for appointment scheduling, and Google Fonts for typography. Their availability and performance are outside our control.</p>
     <p>The Site may link to websites we do not operate. We do not endorse and are not responsible for their content, products, or practices, and your use of them is at your own risk and subject to their terms.</p>
     <p>Any third-party names, marketplaces, platforms, or logos referred to on the Site are the property of their respective owners and are used for identification and descriptive purposes only. Their use does not imply any affiliation with, endorsement by, or sponsorship by those parties.</p>
 
